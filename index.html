@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Click Text</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #121212;
+      font-family: Arial, sans-serif;
+    }.container {
+  text-align: center;
+}
+
+button {
+  padding: 16px 28px;
+  font-size: 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #1db954;
+  color: white;
+}
+
+#text {
+  margin-top: 20px;
+  font-size: 28px;
+  color: white;
+  display: none;
+  transition: opacity 0.5s ease;
+}
+
+#photo {
+  margin-top: 20px;
+  width: 200px;
+  border-radius: 14px;
+  display: none;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button onclick="toggleContent()">Tekan Aku</button>
+    <div id="text">bakri kontol</div>
+    <img id="photo" src="foto.jpg" alt="foto" />
+  </div>  <script>
+    function toggleContent() {
+      const text = document.getElementById('text');
+      const photo = document.getElementById('photo');
+
+      if (text.style.display === 'none') {
+        text.style.display = 'block';
+        photo.style.display = 'block';
+      } else {
+        text.style.display = 'none';
+        photo.style.display = 'none';
+      }
+    }
+  </script></body>
+</html>
